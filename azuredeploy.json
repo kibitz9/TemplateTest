@@ -2,6 +2,16 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+
+    "skybitsLicenceKey": {
+      "type": "string",
+        "metadata": {
+          "description": "SkyBITS Licence Key"
+        }
+
+    },
+
+
     "virtualMachineName": {
       "type": "string",
       "metadata": {
@@ -14,7 +24,7 @@
         "description": "SQL Server Virtual Machine Size"
       },
       "allowedValues": [
-        "Standard_DS1",
+        "Standard_DS1xxxxx",
         "Standard_DS2",
         "Standard_DS3",
         "Standard_DS4",
