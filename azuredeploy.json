@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 
-    "skybitsLicenceKey": {
+    "skyBITSLicenseKey": {
       "type": "string",
         "metadata": {
-          "description": "SkyBITS Licence Key"
+          "description": "SkyBITS License Key"
         }
 
     },

@@ -92,7 +92,7 @@
         "servicePrincipalSecret": {
             "value": "Your Service principal Secret"
         },
-        "skybitsLicenceKey":{
+        "skyBITSLicenseKey":{
             "value": "xxxxxxxx"
         }
     }
