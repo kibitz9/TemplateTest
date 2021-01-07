@@ -22,7 +22,7 @@
         "description": "SQL Server Virtual Machine Size"
       },
       "allowedValues": [
-        "Standard_DS1xxxxx",
+        "Standard_DS1",
         "Standard_DS2",
         "Standard_DS3",
         "Standard_DS4",
@@ -138,7 +138,7 @@
     "sqlStorageWorkloadType": {
       "type": "string",
       "metadata": {
-        "description": "SQL Server Virtual Machine Workload Type: GENERAL - general work load; DW - datawear house work load; OLTP - Transactional processing work load"
+        "description": "SQL Server Virtual Machine Workload Type: GENERAL - general work load; DW - dataware house work load; OLTP - Transactional processing work load"
       },
       "allowedValues": [
         "GENERAL",

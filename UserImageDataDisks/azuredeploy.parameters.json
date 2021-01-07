@@ -15,9 +15,9 @@
       "value": "https://contosostorage1.blob.core.windows.net/vhds/contoso-os.vhd"
     }
     ,
-    "dataDiskVhdUri": {
-      "value": "https://contosostorage1.blob.core.windows.net/vhds/contoso-data.vhd"
-    },
+    // "dataDiskVhdUri": {
+    //   "value": "https://contosostorage1.blob.core.windows.net/vhds/contoso-data.vhd"
+    // },
     
     "bootDiagnosticsStorageAccountName": {
       "value": "contosostorage1"
@@ -49,3 +49,4 @@
     }
   }
 }
+

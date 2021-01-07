@@ -17,3 +17,7 @@ This template allows you to create virtual machines from the specified VHDs for 
 
 
 
+https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkibitz9%2FTemplateTest%2Fmaster%2FUserImageDataDisks%2Fazuredeploy.json
+
+
+https://raw.githubusercontent.com/kibitz9/TemplateTest/master/UserImageDataDisks/azuredeploy.json

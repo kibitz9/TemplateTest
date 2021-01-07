@@ -26,12 +26,12 @@
         "description": "URI in Azure storage of the blob (VHD) that you want to use for the OS disk. eg. https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"
       }
     },
-    "dataDiskVhdUri": {
-      "type": "string",
-      "metadata": {
-        "description": "URI in Azure storage of the blob (VHD) that you want to use for the data disk. eg. https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"
-      }
-    },
+    // "dataDiskVhdUri": {
+    //   "type": "string",
+    //   "metadata": {
+    //     "description": "URI in Azure storage of the blob (VHD) that you want to use for the data disk. eg. https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"
+    //   }
+    // },
     "diskStorageType": {
       "type": "string",
       "allowedValues": [
@@ -113,12 +113,13 @@
   },
   "variables": {
     "imageName": "myCustomImage",
+    "xxxx": "https://raw.githubusercontent.com/kibitz9/TemplateTest/master/UserImageDataDisks/",
     "publicIPAddressName": "[concat(parameters('customVmName'),'IP')]",
     "vmName": "[parameters('customVmName')]",
     "nicName": "[concat(parameters('customVmName'),'Nic')]",
     "publicIPAddressType": "Dynamic",
     "apiVersion": "2015-06-15",
-    "templatelink": "[concat('https://raw.githubusercontent.com/azure/azure-quickstart-templates/master/101-vm-user-image-data-disks/', parameters('newOrExistingVnet'),'vnet.json')]"
+    "templatelink": "[concat(variables('xxxx'), parameters('newOrExistingVnet'),'vnet.json')]"
   },
   "resources": [
     {
@@ -133,14 +134,15 @@
             "osState": "Generalized",
             "blobUri": "[parameters('osDiskVhdUri')]",
             "storageAccountType": "Standard_LRS"
-          },
-          "dataDisks": [
-            {
-              "lun": 1,
-              "blobUri": "[parameters('dataDiskVhdUri')]",
-              "storageAccountType": "Standard_LRS"
-            }
-          ]
+          }
+          // ,
+          // "dataDisks": [
+          //   {
+          //     // "lun": 1,
+          //     // "blobUri": "[parameters('dataDiskVhdUri')]",
+          //     // "storageAccountType": "Standard_LRS"
+          //   }
+          // ]
         }
       }
     },
@@ -233,17 +235,18 @@
             "managedDisk": {
               "storageAccountType": "[parameters('diskStorageType')]"
             }
-          },
-          "dataDisks": [
-            {
-              "name": "[concat(parameters('customVmName'),'_DataDisk1')]",
-              "lun": 1,
-              "createOption": "FromImage",
-              "managedDisk": {
-                "storageAccountType": "[parameters('diskStorageType')]"
-              }
-            }
-          ]
+          }
+          //,
+          // "dataDisks": [
+          //   {
+          //     "name": "[concat(parameters('customVmName'),'_DataDisk1')]",
+          //     "lun": 1,
+          //     "createOption": "FromImage",
+          //     "managedDisk": {
+          //       "storageAccountType": "[parameters('diskStorageType')]"
+          //     }
+          //   }
+          // ]
         },
         "networkProfile": {
           "networkInterfaces": [
