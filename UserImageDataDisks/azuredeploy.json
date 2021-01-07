@@ -20,12 +20,12 @@
         "description": "Resource group of the existing storage account"
       }
     },
-    "osDiskVhdUri": {
-      "type": "string",
-      "metadata": {
-        "description": "URI in Azure storage of the blob (VHD) that you want to use for the OS disk. eg. https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"
-      }
-    },
+    // "osDiskVhdUri": {
+    //   "type": "string",
+    //   "metadata": {
+    //     "description": "URI in Azure storage of the blob (VHD) that you want to use for the OS disk. eg. https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"
+    //   }
+    // },
     // "dataDiskVhdUri": {
     //   "type": "string",
     //   "metadata": {
@@ -119,7 +119,8 @@
     "nicName": "[concat(parameters('customVmName'),'Nic')]",
     "publicIPAddressType": "Dynamic",
     "apiVersion": "2015-06-15",
-    "templatelink": "[concat(variables('xxxx'), parameters('newOrExistingVnet'),'vnet.json')]"
+    "templatelink": "[concat(variables('xxxx'), parameters('newOrExistingVnet'),'vnet.json')]",
+    "sas":"https://transactoffer.blob.core.windows.net/diskimages/transactoffertest.vhd?sp=rl&st=2021-01-06T17:58:00Z&se=2022-01-08T19:58:00Z&sv=2019-12-12&sr=c&sig=yu60Uj6Hb%2FI%2FC7ATYw8E8pH6IwqI5OktUuby9CcmoPM%3D"
   },
   "resources": [
     {
@@ -132,7 +133,7 @@
           "osDisk": {
             "osType": "[parameters('osType')]",
             "osState": "Generalized",
-            "blobUri": "[parameters('osDiskVhdUri')]",
+            "blobUri": "[variables('sas')]",
             "storageAccountType": "Standard_LRS"
           }
           // ,
