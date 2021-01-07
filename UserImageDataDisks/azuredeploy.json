@@ -8,18 +8,18 @@
         "description": "This is the name of the your VM"
       }
     },
-    "bootDiagnosticsStorageAccountName": {
-      "type": "string",
-      "metadata": {
-        "description": "This is the name of the your storage account"
-      }
-    },
-    "bootDiagnosticsStorageAccountResourceGroupName": {
-      "type": "string",
-      "metadata": {
-        "description": "Resource group of the existing storage account"
-      }
-    },
+    // "bootDiagnosticsStorageAccountName": {
+    //   "type": "string",
+    //   "metadata": {
+    //     "description": "This is the name of the your storage account"
+    //   }
+    // },
+    // "bootDiagnosticsStorageAccountResourceGroupName": {
+    //   "type": "string",
+    //   "metadata": {
+    //     "description": "Resource group of the existing storage account"
+    //   }
+    // },
     // "osDiskVhdUri": {
     //   "type": "string",
     //   "metadata": {
@@ -255,13 +255,14 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
             }
           ]
-        },
-        "diagnosticsProfile": {
-          "bootDiagnostics": {
-            "enabled": true,
-            "storageUri": "[concat(reference(resourceId(parameters('bootDiagnosticsStorageAccountResourceGroupName'), 'Microsoft.Storage/storageAccounts/', parameters('bootDiagnosticsStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob)]"
-          }
         }
+        // ,
+        // "diagnosticsProfile": {
+        //   "bootDiagnostics": {
+        //     "enabled": true,
+        //     "storageUri": "[concat(reference(resourceId(parameters('bootDiagnosticsStorageAccountResourceGroupName'), 'Microsoft.Storage/storageAccounts/', parameters('bootDiagnosticsStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob)]"
+        //   }
+        // }
       }
     }
   ]
