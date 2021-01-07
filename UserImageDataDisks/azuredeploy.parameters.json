@@ -11,10 +11,10 @@
     "adminPassword": {
       "value": ""
     },
-    "osDiskVhdUri": {
-      "value": "https://contosostorage1.blob.core.windows.net/vhds/contoso-os.vhd"
-    }
-    ,
+    // "osDiskVhdUri": {
+    //   "value": "https://contosostorage1.blob.core.windows.net/vhds/contoso-os.vhd"
+    // }
+    // ,
     // "dataDiskVhdUri": {
     //   "value": "https://contosostorage1.blob.core.windows.net/vhds/contoso-data.vhd"
     // },
