@@ -7,11 +7,9 @@
       "type": "string",
         "metadata": {
           "description": "SkyBITS License Key"
+          
         }
-
     },
-
-
     "virtualMachineName": {
       "type": "string",
       "metadata": {
